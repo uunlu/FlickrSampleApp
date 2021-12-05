@@ -18,17 +18,26 @@ struct PhotoListView: View {
     ]
     
     var body: some View {
+        searchBar
         ScrollView {
-            TextField("Search...", text: $searchText)
-                .padding(10)
-                .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
-                .clipShape(RoundedRectangle(cornerRadius: 15))
             LazyVGrid(columns: columns) {
                 ForEach(items) { item in
                     navigationItem(item)
                 }
             }
         }
+    }
+}
+
+// MARK: - Extension UI components
+extension PhotoListView {
+    var searchBar: some View {
+        TextField("Search...", text: $searchText)
+            .autocapitalization(.none)
+            
+            .padding(10)
+            .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
     }
     
     func navigationItem(_ item: PhotoViewModel) -> some View {
@@ -48,6 +57,7 @@ struct PhotoListView: View {
             }
         }
     }
+    
 }
 
 #if DEBUG
