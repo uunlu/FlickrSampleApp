@@ -22,7 +22,7 @@
 		352EFA33275CE34A006281E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA32275CE34A006281E2 /* Config.swift */; };
 		352EFA35275CE36D006281E2 /* EndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA34275CE36D006281E2 /* EndpointFactory.swift */; };
 		352EFA44275CE6BD006281E2 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA3C275CE6BD006281E2 /* Entities.framework */; };
-		352EFA4A275CE6BD006281E2 /* Entities.h in Headers */ = {isa = PBXBuildFile; fileRef = 352EFA3E275CE6BD006281E2 /* Entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		352EFA52275CE6E8006281E2 /* RemotePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA51275CE6E8006281E2 /* RemotePhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,8 @@
 		352EFA32275CE34A006281E2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		352EFA34275CE36D006281E2 /* EndpointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointFactory.swift; sourceTree = "<group>"; };
 		352EFA3C275CE6BD006281E2 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		352EFA3E275CE6BD006281E2 /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
 		352EFA43275CE6BD006281E2 /* EntitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		352EFA51275CE6E8006281E2 /* RemotePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,7 +261,7 @@
 		352EFA3D275CE6BD006281E2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				352EFA3E275CE6BD006281E2 /* Entities.h */,
+				352EFA51275CE6E8006281E2 /* RemotePhoto.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -287,7 +287,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352EFA4A275CE6BD006281E2 /* Entities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +491,7 @@
 					};
 					352EFA3B275CE6BD006281E2 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					352EFA42275CE6BD006281E2 = {
 						CreatedOnToolsVersion = 13.0;
@@ -656,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EFA52275CE6E8006281E2 /* RemotePhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1191,7 @@
 		352EFA4C275CE6BD006281E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1212,6 +1214,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1221,6 +1224,7 @@
 		352EFA4D275CE6BD006281E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1252,6 +1256,7 @@
 		352EFA4F275CE6BD006281E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1274,6 +1279,7 @@
 		352EFA50275CE6BD006281E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
