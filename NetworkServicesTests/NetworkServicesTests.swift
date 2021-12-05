@@ -39,6 +39,26 @@ class NetworkServicesTests: XCTestCase {
             
         XCTAssertFalse(sut.requests.isEmpty)
     }
+    
+    func test_urlRequestShouldScuceed_whenDataInDecodableFormat() throws {
+        let model = SampleDecodable(title: "title")
+        let data = try! JSONEncoder().encode(model)
+        let sut = NetworkRequestSpy(result: .success(data))
+        _=sut.get(from: URLRequest.sample)
+            .tryMap { $0 as SampleDecodable }
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(_):
+                    XCTFail()
+                case .finished:
+                    break
+                }
+            }) { response in
+                XCTAssertTrue(model.title == response.title)
+            }
+            
+        XCTAssertFalse(sut.requests.isEmpty)
+    }
 }
 
 public protocol NetworkRequestClient {
