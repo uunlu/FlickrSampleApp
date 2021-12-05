@@ -12,11 +12,8 @@
 		3523931A275CCBD100EC7112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35239319275CCBD100EC7112 /* Assets.xcassets */; };
 		3523931D275CCBD100EC7112 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3523931C275CCBD100EC7112 /* Preview Assets.xcassets */; };
 		35239327275CCBD200EC7112 /* FlickerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239326275CCBD200EC7112 /* FlickerSampleTests.swift */; };
-		35239331275CCBD200EC7112 /* FlickerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239330275CCBD200EC7112 /* FlickerSampleUITests.swift */; };
-		35239333275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239332275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift */; };
 		3523934C275CCCBC00EC7112 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; };
 		35239351275CCCBC00EC7112 /* NetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */; };
-		35239352275CCCBC00EC7112 /* NetworkServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 35239346275CCCBC00EC7112 /* NetworkServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3523935A275CD47B00EC7112 /* NetworkRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239359275CD47B00EC7112 /* NetworkRequestClient.swift */; };
 		3523935C275CD4A800EC7112 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523935B275CD4A800EC7112 /* NetworkClient.swift */; };
 		3523935E275CD4DD00EC7112 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523935D275CD4DD00EC7112 /* NetworkError.swift */; };
@@ -55,10 +52,7 @@
 		35239322275CCBD200EC7112 /* FlickerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239326275CCBD200EC7112 /* FlickerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleTests.swift; sourceTree = "<group>"; };
 		3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35239330275CCBD200EC7112 /* FlickerSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleUITests.swift; sourceTree = "<group>"; };
-		35239332275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35239344275CCCBC00EC7112 /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35239346275CCCBC00EC7112 /* NetworkServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkServices.h; sourceTree = "<group>"; };
 		3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
 		35239359275CD47B00EC7112 /* NetworkRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestClient.swift; sourceTree = "<group>"; };
@@ -111,7 +105,6 @@
 			children = (
 				35239314275CCBCE00EC7112 /* FlickerSample */,
 				35239325275CCBD200EC7112 /* FlickerSampleTests */,
-				3523932F275CCBD200EC7112 /* FlickerSampleUITests */,
 				35239345275CCCBC00EC7112 /* NetworkServices */,
 				3523934F275CCCBC00EC7112 /* NetworkServicesTests */,
 				35239313275CCBCE00EC7112 /* Products */,
@@ -157,19 +150,9 @@
 			path = FlickerSampleTests;
 			sourceTree = "<group>";
 		};
-		3523932F275CCBD200EC7112 /* FlickerSampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				35239330275CCBD200EC7112 /* FlickerSampleUITests.swift */,
-				35239332275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift */,
-			);
-			path = FlickerSampleUITests;
-			sourceTree = "<group>";
-		};
 		35239345275CCCBC00EC7112 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
-				35239346275CCCBC00EC7112 /* NetworkServices.h */,
 				35239359275CD47B00EC7112 /* NetworkRequestClient.swift */,
 				3523935B275CD4A800EC7112 /* NetworkClient.swift */,
 				3523935D275CD4DD00EC7112 /* NetworkError.swift */,
@@ -192,7 +175,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35239352275CCCBC00EC7112 /* NetworkServices.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,8 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35239331275CCBD200EC7112 /* FlickerSampleUITests.swift in Sources */,
-				35239333275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
