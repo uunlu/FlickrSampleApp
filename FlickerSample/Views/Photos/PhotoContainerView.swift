@@ -10,6 +10,7 @@ import SwiftUI
 struct PhotoContainerView: View {
     @StateObject var viewModel: PhotoContainerViewModel
     @State private var showHistory = false
+    let detailsProvider: (PhotoViewModel) -> AnyView
     
     var body: some View {
             VStack {
@@ -39,7 +40,7 @@ struct PhotoContainerView: View {
 // MARK: - Extensions
 extension PhotoContainerView {
     var photoList: some View {
-        PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
+        PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore, detailsProvider: detailsProvider)
     }
     
     var refreshItem: some View {
@@ -57,7 +58,7 @@ extension PhotoContainerView {
 #if DEBUG
 struct PhotoContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoContainerView(viewModel: .init(service: PhotoLoaderSpy()))
+        PhotoContainerView(viewModel: .init(service: PhotoLoaderSpy()), detailsProvider: { _ in Text("Photo details").erased })
     }
 }
 #endif

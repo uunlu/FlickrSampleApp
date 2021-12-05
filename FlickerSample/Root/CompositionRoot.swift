@@ -16,7 +16,15 @@ enum CompositionRoot {
         let adapter = PhotoAdapter(service: client)
         let viewModel = PhotoContainerViewModel(service: adapter)
         return NavigationView {
-            PhotoContainerView(viewModel: viewModel)
+            PhotoContainerView(viewModel: viewModel, detailsProvider: goToPhotos)
         }
     }
+    
+    private static func goToPhotos(viewModel: PhotoViewModel) -> AnyView {
+        return PhotoDetailsView(model: viewModel).erased
+    }
+}
+
+extension View {
+    var erased: AnyView { AnyView(self) }
 }

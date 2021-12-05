@@ -11,6 +11,7 @@ struct PhotoListView: View {
     @Binding var items: [PhotoViewModel]
     @Binding var searchText: String
     let loadMore: ()-> Void
+    let detailsProvider: (PhotoViewModel) -> AnyView
     private let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -24,19 +25,25 @@ struct PhotoListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
             LazyVGrid(columns: columns) {
                 ForEach(items) { item in
-                    HStack {
-                        AsyncImageView(url: item.imageURL){
-                            Text("Loading...")
-                        }
-                    }
-                    .frame(height: 200)
-                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .onAppear{
-                        if item.id == items.last?.id {
-                            loadMore() 
-                        }
-                    }
+                    navigationItem(item)
+                }
+            }
+        }
+    }
+    
+    func navigationItem(_ item: PhotoViewModel) -> some View {
+        NavigationLink(destination: detailsProvider(item)) {
+            HStack {
+                AsyncImageView(url: item.imageURL){
+                    Text("Loading...")
+                }
+            }
+            .frame(height: 200)
+            .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .onAppear{
+                if item.id == items.last?.id {
+                    loadMore()
                 }
             }
         }
@@ -48,7 +55,7 @@ struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoListView(items:
                             .constant([.init(imageURL: URL(string: "http://some-url.com"), title: "Some Title")]
-                                     ), searchText: .constant("search text"), loadMore: {})
+                                     ), searchText: .constant("search text"), loadMore: {}, detailsProvider: { _ in Text("Details").erased })
     }
 }
 #endif
