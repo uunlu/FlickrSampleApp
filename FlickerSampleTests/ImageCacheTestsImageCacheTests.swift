@@ -37,6 +37,16 @@ class ImageCacheTests: XCTestCase {
         XCTAssertNotNil(image)
         XCTAssertEqual(imageToInsert.cgImage?.bytesPerRow, image?.cgImage?.bytesPerRow)
     }
+    
+    func test_cacheOnRemove_shouldHaveNoImage() {
+        let sut = ImageCache.shared
+        let url = URL(string: "https://some-url.com")!
+        let imageToInsert = UIImage(systemName: "lock")!
+        sut.insert(for: url, image: imageToInsert)
+        sut.remove(for: url)
+        let image = sut.item(for: url)
+        XCTAssertNil(image)
+    }
 }
 
 class ImageCache {
@@ -69,6 +79,10 @@ extension ImageCache: ImageCaching {
     }
     
     func remove(for key: URL) {
+        lock.lock()
+        defer { lock.unlock() }
+        
+        cache.removeObject(forKey: key.absoluteString as NSString)
     }
     
     func item(for url: URL) -> UIImage? {
