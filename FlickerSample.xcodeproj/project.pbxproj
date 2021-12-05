@@ -30,6 +30,13 @@
 		352EFA5E275CECF8006281E2 /* PhotoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA5D275CECF8006281E2 /* PhotoAdapter.swift */; };
 		352EFA60275CED00006281E2 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA5F275CED00006281E2 /* PhotoLoader.swift */; };
 		352EFA62275CED1F006281E2 /* PhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA61275CED1F006281E2 /* PhotoRequest.swift */; };
+		352EFA64275CF41C006281E2 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA63275CF41C006281E2 /* CompositionRoot.swift */; };
+		352EFA65275CF449006281E2 /* Adapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA1D275CDA1A006281E2 /* Adapters.framework */; platformFilter = ios; };
+		352EFA66275CF449006281E2 /* Adapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA1D275CDA1A006281E2 /* Adapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		352EFA6A275CF451006281E2 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; platformFilter = ios; };
+		352EFA6B275CF451006281E2 /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA6E275CF504006281E2 /* PhotoContainerView.swift */; };
+		352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +82,20 @@
 			remoteGlobalIDString = 352EFA3B275CE6BD006281E2;
 			remoteInfo = Entities;
 		};
+		352EFA67275CF449006281E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 352EFA1C275CDA1A006281E2;
+			remoteInfo = Adapters;
+		};
+		352EFA6C275CF451006281E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35239343275CCCBC00EC7112;
+			remoteInfo = NetworkServices;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +106,18 @@
 			dstSubfolderSpec = 10;
 			files = (
 				352EFA55275CE7DB006281E2 /* Entities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		352EFA69275CF449006281E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				352EFA66275CF449006281E2 /* Adapters.framework in Embed Frameworks */,
+				352EFA6B275CF451006281E2 /* NetworkServices.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +152,9 @@
 		352EFA5D275CECF8006281E2 /* PhotoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAdapter.swift; sourceTree = "<group>"; };
 		352EFA5F275CED00006281E2 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
 		352EFA61275CED1F006281E2 /* PhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRequest.swift; sourceTree = "<group>"; };
+		352EFA63275CF41C006281E2 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		352EFA6E275CF504006281E2 /* PhotoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerView.swift; sourceTree = "<group>"; };
+		352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EFA65275CF449006281E2 /* Adapters.framework in Frameworks */,
+				352EFA6A275CF451006281E2 /* NetworkServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +268,9 @@
 				35239317275CCBCE00EC7112 /* ContentView.swift */,
 				35239319275CCBD100EC7112 /* Assets.xcassets */,
 				3523931B275CCBD100EC7112 /* Preview Content */,
+				352EFA63275CF41C006281E2 /* CompositionRoot.swift */,
+				352EFA6E275CF504006281E2 /* PhotoContainerView.swift */,
+				352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */,
 			);
 			path = FlickerSample;
 			sourceTree = "<group>";
@@ -347,10 +388,13 @@
 				3523930E275CCBCE00EC7112 /* Sources */,
 				3523930F275CCBCE00EC7112 /* Frameworks */,
 				35239310275CCBCE00EC7112 /* Resources */,
+				352EFA69275CF449006281E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				352EFA68275CF449006281E2 /* PBXTargetDependency */,
+				352EFA6D275CF451006281E2 /* PBXTargetDependency */,
 			);
 			name = FlickerSample;
 			productName = FlickerSample;
@@ -647,7 +691,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35239318275CCBCE00EC7112 /* ContentView.swift in Sources */,
+				352EFA64275CF41C006281E2 /* CompositionRoot.swift in Sources */,
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
+				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
+				352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +800,18 @@
 			isa = PBXTargetDependency;
 			target = 352EFA3B275CE6BD006281E2 /* Entities */;
 			targetProxy = 352EFA56275CE7DB006281E2 /* PBXContainerItemProxy */;
+		};
+		352EFA68275CF449006281E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 352EFA1C275CDA1A006281E2 /* Adapters */;
+			targetProxy = 352EFA67275CF449006281E2 /* PBXContainerItemProxy */;
+		};
+		352EFA6D275CF451006281E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 35239343275CCCBC00EC7112 /* NetworkServices */;
+			targetProxy = 352EFA6C275CF451006281E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1037,6 +1096,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1071,6 +1131,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1151,6 +1212,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1186,6 +1248,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1265,6 +1328,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1299,6 +1363,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
