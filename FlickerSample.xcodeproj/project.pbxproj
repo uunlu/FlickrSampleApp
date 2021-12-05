@@ -45,6 +45,7 @@
 		352EFA82275D0CD5006281E2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA81275D0CD5006281E2 /* ImageLoader.swift */; };
 		352EFA84275D0D47006281E2 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA83275D0D47006281E2 /* AsyncImageView.swift */; };
 		352EFA86275D1F87006281E2 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA85275D1F87006281E2 /* PhotoViewModel.swift */; };
+		352EFA88275D47A0006281E2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA87275D47A0006281E2 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		352EFA81275D0CD5006281E2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		352EFA83275D0D47006281E2 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		352EFA85275D1F87006281E2 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		352EFA87275D47A0006281E2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 			children = (
 				352EFA76275D0464006281E2 /* AsyncImage */,
 				352EFA6E275CF504006281E2 /* PhotoContainerView.swift */,
+				352EFA87275D47A0006281E2 /* HistoryView.swift */,
 				352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */,
 				352EFA85275D1F87006281E2 /* PhotoViewModel.swift */,
 				352EFA74275D02C3006281E2 /* PhotoListView.swift */,
@@ -693,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				352EFA7A275D074F006281E2 /* ImageCache.swift in Sources */,
+				352EFA88275D47A0006281E2 /* HistoryView.swift in Sources */,
 				352EFA86275D1F87006281E2 /* PhotoViewModel.swift in Sources */,
 				352EFA64275CF41C006281E2 /* CompositionRoot.swift in Sources */,
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PhotoContainerView: View {
     @StateObject var viewModel: PhotoContainerViewModel
+    @State private var showHistory = false
     
     var body: some View {
             VStack {
@@ -22,6 +23,16 @@ struct PhotoContainerView: View {
                 viewModel.load()
             }
             .navigationTitle("\(viewModel.model.total)  Photos")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    refreshItem
+                }
+            }
+            .sheet(isPresented: $showHistory, onDismiss: {
+                
+            }, content: {
+                HistoryView(items: viewModel.searchTerms)
+            })
     }
 }
 
@@ -29,6 +40,17 @@ struct PhotoContainerView: View {
 extension PhotoContainerView {
     var photoList: some View {
         PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
+    }
+    
+    var refreshItem: some View {
+        HStack {
+            Button {
+                showHistory.toggle()
+            } label: {
+                Image(systemName: "lineweight")
+                    .padding()
+            }
+        }
     }
 }
 
