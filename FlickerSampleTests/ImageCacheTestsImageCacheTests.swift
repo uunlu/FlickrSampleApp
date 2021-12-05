@@ -21,6 +21,12 @@ class ImageCacheTests: XCTestCase {
         sut.configure(limit: sizeLimit)
         XCTAssertEqual(sut.sizeLimit, sizeLimit)
     }
+    
+    func test_cacheOnInit_shouldHaveNoImage() {
+        let sut = ImageCache.shared
+        let image = sut.item(for: URL(string: "https://some-url.com")!)
+        XCTAssertNil(image)
+    }
 }
 
 class ImageCache {
@@ -41,4 +47,22 @@ class ImageCache {
     func configure(limit: Int) {
         self.sizeLimit = limit
     }
+}
+
+extension ImageCache: ImageCaching {
+    func insert(for url: URL, image: UIImage) {
+    }
+    
+    func remove(for key: URL) {
+    }
+    
+    func item(for url: URL) -> UIImage? {
+        return cache.object(forKey: url.absoluteString as NSString)
+    }
+}
+
+protocol ImageCaching {
+    func item(for url: URL) -> UIImage?
+    func insert(for url: URL, image: UIImage)
+    func remove(for key: URL)
 }
