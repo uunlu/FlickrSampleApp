@@ -26,7 +26,7 @@ struct PhotoContainerView: View {
             .navigationTitle("\(viewModel.model.total)  Photos")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    refreshItem
+                    historyButton
                 }
             }
             .sheet(isPresented: $showHistory, onDismiss: {
@@ -43,7 +43,7 @@ extension PhotoContainerView {
         PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore, detailsProvider: detailsProvider)
     }
     
-    var refreshItem: some View {
+    var historyButton: some View {
         HStack {
             Button {
                 showHistory.toggle()
