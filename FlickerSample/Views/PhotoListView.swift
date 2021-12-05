@@ -37,6 +37,7 @@ struct PhotoListView: View {
     }
 }
 
+#if DEBUG
 struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoListView(items:
@@ -44,3 +45,4 @@ struct PhotoListView_Previews: PreviewProvider {
                                      ), loadMore: {})
     }
 }
+#endif

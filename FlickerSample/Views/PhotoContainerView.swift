@@ -21,8 +21,10 @@ struct PhotoContainerView: View {
     }
 }
 
+#if DEBUG
 struct PhotoContainerView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoContainerView(viewModel: .init(service: PhotoLoaderSpy()))
     }
 }
+#endif
