@@ -16,3 +16,10 @@ final class PhotoContainerViewModel: ObservableObject {
         self.service = service
     }
 }
+
+class PhotoLoaderSpy: PhotoLoader {
+    func load(request: PhotoRequest) -> AnyPublisher<ContainerPhotoViewModel, Error> {
+        return Result.Publisher(.sample)
+            .eraseToAnyPublisher()
+    }
+}

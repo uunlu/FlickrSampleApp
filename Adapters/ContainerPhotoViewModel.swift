@@ -12,3 +12,10 @@ public struct ContainerPhotoViewModel {
     let page: Int
     let photos: [PhotoViewModel]
 }
+
+extension ContainerPhotoViewModel {
+    public static var sample: ContainerPhotoViewModel {
+        let photoViewModel = PhotoViewModel(imageURLString: "https://some-url.com", title: "Sample title")
+        return .init(total: 1, page: 1, photos: [photoViewModel])
+    }
+}

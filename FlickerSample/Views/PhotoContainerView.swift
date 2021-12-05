@@ -15,8 +15,8 @@ struct PhotoContainerView: View {
     }
 }
 
-//struct PhotoContainerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PhotoContainerView(viewModel: <#PhotoContainerViewModel#>)
-//    }
-//}
+struct PhotoContainerView_Previews: PreviewProvider {
+    static var previews: some View {
+        PhotoContainerView(viewModel: .init(service: PhotoLoaderSpy()))
+    }
+}

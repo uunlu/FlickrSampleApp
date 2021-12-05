@@ -46,13 +46,6 @@
 			remoteGlobalIDString = 35239311275CCBCE00EC7112;
 			remoteInfo = FlickerSample;
 		};
-		3523932D275CCBD200EC7112 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 35239311275CCBCE00EC7112;
-			remoteInfo = FlickerSample;
-		};
 		3523934D275CCCBC00EC7112 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
@@ -130,7 +123,6 @@
 		3523931C275CCBD100EC7112 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35239322275CCBD200EC7112 /* FlickerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239326275CCBD200EC7112 /* FlickerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleTests.swift; sourceTree = "<group>"; };
-		3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239344275CCCBC00EC7112 /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
@@ -166,13 +158,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3523931F275CCBD200EC7112 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		35239329275CCBD200EC7112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,7 +233,6 @@
 			children = (
 				35239312275CCBCE00EC7112 /* FlickerSample.app */,
 				35239322275CCBD200EC7112 /* FlickerSampleTests.xctest */,
-				3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */,
 				35239344275CCCBC00EC7112 /* NetworkServices.framework */,
 				3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */,
 				352EFA1D275CDA1A006281E2 /* Adapters.framework */,
@@ -308,10 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				352EFA36275CE670006281E2 /* Helper */,
-				352EFA59275CECAD006281E2 /* ContainerPhotoViewModel.swift */,
 				352EFA5D275CECF8006281E2 /* PhotoAdapter.swift */,
 				352EFA5F275CED00006281E2 /* PhotoLoader.swift */,
 				352EFA61275CED1F006281E2 /* PhotoRequest.swift */,
+				352EFA59275CECAD006281E2 /* ContainerPhotoViewModel.swift */,
 				352EFA5B275CECC4006281E2 /* PhotoViewModel.swift */,
 			);
 			path = Adapters;
@@ -431,24 +415,6 @@
 			productName = FlickerSampleTests;
 			productReference = 35239322275CCBD200EC7112 /* FlickerSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3523932B275CCBD200EC7112 /* FlickerSampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3523933C275CCBD200EC7112 /* Build configuration list for PBXNativeTarget "FlickerSampleUITests" */;
-			buildPhases = (
-				35239328275CCBD200EC7112 /* Sources */,
-				35239329275CCBD200EC7112 /* Frameworks */,
-				3523932A275CCBD200EC7112 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3523932E275CCBD200EC7112 /* PBXTargetDependency */,
-			);
-			name = FlickerSampleUITests;
-			productName = FlickerSampleUITests;
-			productReference = 3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		35239343275CCCBC00EC7112 /* NetworkServices */ = {
 			isa = PBXNativeTarget;
@@ -577,10 +543,6 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 35239311275CCBCE00EC7112;
 					};
-					3523932B275CCBD200EC7112 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 35239311275CCBCE00EC7112;
-					};
 					35239343275CCCBC00EC7112 = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
@@ -619,7 +581,6 @@
 			targets = (
 				35239311275CCBCE00EC7112 /* FlickerSample */,
 				35239321275CCBD200EC7112 /* FlickerSampleTests */,
-				3523932B275CCBD200EC7112 /* FlickerSampleUITests */,
 				35239343275CCCBC00EC7112 /* NetworkServices */,
 				3523934A275CCCBC00EC7112 /* NetworkServicesTests */,
 				352EFA1C275CDA1A006281E2 /* Adapters */,
@@ -641,13 +602,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		35239320275CCBD200EC7112 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3523932A275CCBD200EC7112 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -718,13 +672,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35239328275CCBD200EC7112 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		35239340275CCCBC00EC7112 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -787,11 +734,6 @@
 			isa = PBXTargetDependency;
 			target = 35239311275CCBCE00EC7112 /* FlickerSample */;
 			targetProxy = 35239323275CCBD200EC7112 /* PBXContainerItemProxy */;
-		};
-		3523932E275CCBD200EC7112 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 35239311275CCBCE00EC7112 /* FlickerSample */;
-			targetProxy = 3523932D275CCBD200EC7112 /* PBXContainerItemProxy */;
 		};
 		3523934E275CCCBC00EC7112 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1047,50 +989,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickerSample.app/FlickerSample";
-			};
-			name = Release;
-		};
-		3523933D275CCBD200EC7112 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.FlickerSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickerSample;
-			};
-			name = Debug;
-		};
-		3523933E275CCBD200EC7112 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.FlickerSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickerSample;
 			};
 			name = Release;
 		};
@@ -1467,15 +1365,6 @@
 			buildConfigurations = (
 				3523933A275CCBD200EC7112 /* Debug */,
 				3523933B275CCBD200EC7112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3523933C275CCBD200EC7112 /* Build configuration list for PBXNativeTarget "FlickerSampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3523933D275CCBD200EC7112 /* Debug */,
-				3523933E275CCBD200EC7112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
