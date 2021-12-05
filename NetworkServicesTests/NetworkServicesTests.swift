@@ -21,6 +21,24 @@ class NetworkServicesTests: XCTestCase {
         XCTAssertFalse(sut.requests.isEmpty)
         XCTAssertNotNil(result)
     }
+    
+    func test_urlRequestShouldFail_whenDataDecodeFails() throws {
+        let sut = NetworkRequestSpy(result: .success(Data()))
+        _=sut.get(from: URLRequest.sample)
+            .tryMap { $0 as SampleDecodable }
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(_):
+                    break
+                case .finished:
+                    XCTFail()
+                    break
+                }
+            }) { _ in
+            }
+            
+        XCTAssertFalse(sut.requests.isEmpty)
+    }
 }
 
 public protocol NetworkRequestClient {
