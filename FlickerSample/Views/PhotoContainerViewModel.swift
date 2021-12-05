@@ -49,12 +49,6 @@ final class PhotoContainerViewModel: ObservableObject {
     }
 }
 
-struct PhotoViewModel: Identifiable {
-    let id: String = UUID().uuidString
-    let imageURL: URL?
-    let title: String
-}
-
 #if DEBUG
 class PhotoLoaderSpy: PhotoLoader {
     func load(request: PhotoRequest) -> AnyPublisher<ContainerPhotoViewModel, Error> {
