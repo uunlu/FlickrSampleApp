@@ -14,25 +14,26 @@ struct PhotoContainerView: View {
     
     var body: some View {
             VStack {
-                photoList
-                if viewModel.isLoading {
-                    ProgressView()
+                    photoList
+                    if viewModel.isLoading {
+                        ProgressView()
+                    }
+                ErrorView(isShowing: $viewModel.hasError, message: viewModel.errorMessage)
                 }
-            }
-            .padding()
-            .onAppear {
-                viewModel.load()
-            }
-            .navigationTitle("\(viewModel.model.total)  Photos")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    historyButton
+                .padding()
+                .onAppear {
+                    viewModel.load()
                 }
-            }
-            .sheet(isPresented: $showHistory, onDismiss: {
-                
-            }, content: {
-                HistoryView(items: viewModel.searchTerms, searchText: $viewModel.searchText)
+                .navigationTitle("\(viewModel.model.total)  Photos")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        historyButton
+                    }
+                }
+                .sheet(isPresented: $showHistory, onDismiss: {
+                    
+                }, content: {
+                    HistoryView(items: viewModel.searchTerms, searchText: $viewModel.searchText)
             })
     }
 }

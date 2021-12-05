@@ -48,6 +48,8 @@
 		352EFA88275D47A0006281E2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA87275D47A0006281E2 /* HistoryView.swift */; };
 		352EFA8C275D4E2F006281E2 /* PhotoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA8B275D4E2F006281E2 /* PhotoDetailsView.swift */; };
 		352EFA90275D54B1006281E2 /* BoxModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA8F275D54B1006281E2 /* BoxModifier.swift */; };
+		352EFA93275D5634006281E2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA92275D5634006281E2 /* ErrorView.swift */; };
+		352EFA95275D565D006281E2 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA94275D565D006281E2 /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,8 @@
 		352EFA87275D47A0006281E2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		352EFA8B275D4E2F006281E2 /* PhotoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsView.swift; sourceTree = "<group>"; };
 		352EFA8F275D54B1006281E2 /* BoxModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxModifier.swift; sourceTree = "<group>"; };
+		352EFA92275D5634006281E2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		352EFA94275D565D006281E2 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +367,7 @@
 		352EFA72275CF5C2006281E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				352EFA91275D561C006281E2 /* Shared */,
 				352EFA76275D0464006281E2 /* AsyncImage */,
 				352EFA8A275D4DF8006281E2 /* Photos */,
 				352EFA8D275D5401006281E2 /* PhotoDetails */,
@@ -417,6 +422,15 @@
 				352EFA8F275D54B1006281E2 /* BoxModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		352EFA91275D561C006281E2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				352EFA92275D5634006281E2 /* ErrorView.swift */,
+				352EFA94275D565D006281E2 /* ErrorHandling.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -732,9 +746,11 @@
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
 				352EFA8C275D4E2F006281E2 /* PhotoDetailsView.swift in Sources */,
 				352EFA90275D54B1006281E2 /* BoxModifier.swift in Sources */,
+				352EFA95275D565D006281E2 /* ErrorHandling.swift in Sources */,
 				352EFA84275D0D47006281E2 /* AsyncImageView.swift in Sources */,
 				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
 				352EFA7C275D07C4006281E2 /* ImageCaching.swift in Sources */,
+				352EFA93275D5634006281E2 /* ErrorView.swift in Sources */,
 				352EFA82275D0CD5006281E2 /* ImageLoader.swift in Sources */,
 				352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */,
 				352EFA80275D0C8B006281E2 /* ImageLoading.swift in Sources */,

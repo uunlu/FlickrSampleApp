@@ -9,11 +9,16 @@ import Foundation
 import Combine
 import Adapters
 
-final class PhotoContainerViewModel: ObservableObject {
+final class PhotoContainerViewModel: ObservableObject, ErrorHandling {
+    // MARK: - ErrorHandling protocol properties
+    @Published var hasError: Bool = true
+    private(set) var errorMessage: String = "An error occured, please try again"
+    
     private let service: PhotoLoader
     private let perPage = 20
     private var page = 1
     private var bag = Set<AnyCancellable>()
+
     @Published private(set) var model: ContainerPhotoViewModel {
         didSet {
             items.append(contentsOf: model.photos.map { .init(imageURL: URL(string: $0.imageURLString), title: $0.title)})
@@ -38,10 +43,13 @@ final class PhotoContainerViewModel: ObservableObject {
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
+                    // An improved error handling message can be handled
                     print(error)
                     self.isLoading = false
+                    self.hasError = true
                     break
                 case .finished:
+                    self.hasError = false
                     break
                 }
             }) { data in
@@ -58,7 +66,7 @@ final class PhotoContainerViewModel: ObservableObject {
     
     private func bind() {
         $searchText
-            .removeDuplicates(by: { $0.lowercased() == $1.lowercased() })
+            .removeDuplicates(by: { $0.lowercased() == $1.lowercased() }) // if last search is the same do not make request
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .sink(receiveValue: { value in
                 self.search(value)
@@ -68,9 +76,11 @@ final class PhotoContainerViewModel: ObservableObject {
     
     private func search(_ text: String) {
         guard text.count > 2 else { return }
+        // reset last search
         page = 1
         model = .init(total: 0, page: 0, photos: [])
         items.removeAll()
+        
         addHistory(text)
         load()
     }
