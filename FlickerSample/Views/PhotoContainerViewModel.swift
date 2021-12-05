@@ -12,7 +12,7 @@ import Adapters
 final class PhotoContainerViewModel: ObservableObject {
     private let service: PhotoLoader
     private let perPage = 20
-    private let page = 1
+    private var page = 1
     private var bag = Set<AnyCancellable>()
     @Published private(set) var model: ContainerPhotoViewModel {
         didSet {
@@ -20,14 +20,16 @@ final class PhotoContainerViewModel: ObservableObject {
         }
     }
     @Published var items: [PhotoViewModel] = []
+    @Published var searchText: String = ""
+    
     init(service: PhotoLoader) {
         self.model = .init(total: 0, page: 0, photos: [])
         self.service = service
-        
+        bind()
     }
     
     func load() {
-        let request = PhotoRequest(tags: "utrecht", perPage: perPage, page: page)
+        let request = PhotoRequest(tags: searchText, perPage: perPage, page: page)
         service.load(request: request)
             .delay(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink(receiveCompletion: { completion in
@@ -45,6 +47,25 @@ final class PhotoContainerViewModel: ObservableObject {
     }
     
     func loadMore() {
+        // Implement if max number of pages reached to not send load requests any more
+        load()
+    }
+    
+    private func bind() {
+        $searchText
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink(receiveValue: { value in
+                self.search(value)
+            })
+            .store(in: &bag)
+    }
+    
+    private func search(_ text: String) {
+        guard text.count > 2 else { return }
+        page = 1
+        model = .init(total: 0, page: 0, photos: [])
+        items.removeAll()
+        
         load()
     }
 }

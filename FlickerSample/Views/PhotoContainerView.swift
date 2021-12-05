@@ -12,8 +12,10 @@ struct PhotoContainerView: View {
     
     var body: some View {
             VStack {
+                TextField("Search...", text: $viewModel.searchText)
                 PhotoListView(items: $viewModel.items, loadMore: viewModel.loadMore)
             }
+            .padding()
             .onAppear {
                 viewModel.load()
             }
