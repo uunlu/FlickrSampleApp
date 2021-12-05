@@ -29,6 +29,7 @@ final class PhotoContainerViewModel: ObservableObject {
     func load() {
         let request = PhotoRequest(tags: "utrecht", perPage: perPage, page: page)
         service.load(request: request)
+            .delay(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
@@ -41,6 +42,10 @@ final class PhotoContainerViewModel: ObservableObject {
                 self.model = data
             }
             .store(in: &bag)
+    }
+    
+    func loadMore() {
+        load()
     }
 }
 

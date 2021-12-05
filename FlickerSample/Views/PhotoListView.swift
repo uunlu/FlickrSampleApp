@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PhotoListView: View {
     @Binding var items: [PhotoViewModel]
+    let loadMore: ()-> Void
     private let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -24,6 +25,11 @@ struct PhotoListView: View {
                             Text("Loading...")
                         }
                     }
+                    .onAppear{
+                        if item.id == items.last?.id {
+                            loadMore() 
+                        }
+                    }
                 }
             }
         }
@@ -34,6 +40,6 @@ struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoListView(items:
                             .constant([.init(imageURL: URL(string: "http://some-url.com"), title: "Some Title")]
-                                     ))
+                                     ), loadMore: {})
     }
 }

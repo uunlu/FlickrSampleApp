@@ -12,7 +12,7 @@ struct PhotoContainerView: View {
     
     var body: some View {
             VStack {
-                PhotoListView(items: $viewModel.items)
+                PhotoListView(items: $viewModel.items, loadMore: viewModel.loadMore)
             }
             .onAppear {
                 viewModel.load()
