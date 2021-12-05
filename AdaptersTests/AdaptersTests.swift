@@ -32,7 +32,7 @@ class AdaptersTests: XCTestCase {
         let expectedURL = "https://farm66.static.flickr.com/65535/51722062928_52fe2850ef.jpg"
         let photos = Photos(page: 1, pages: 10, perpage: 10, total: 100, photo: [photo])
         let remotePhoto = RemotePhoto(photos: photos, stat: "")
-        let containerPhotoViewModel = mapToContainerViewModel(from: remotePhoto)
+        let containerPhotoViewModel = mapToContainerViewModel(from: remotePhoto.photos)
         
         XCTAssertEqual(containerPhotoViewModel.page, 1)
         XCTAssertEqual(containerPhotoViewModel.total, 100)
@@ -40,10 +40,10 @@ class AdaptersTests: XCTestCase {
         XCTAssertEqual(containerPhotoViewModel.photos.first?.imageURLString, expectedURL)
     }
     
-    private func mapToContainerViewModel(from remotePhoto: RemotePhoto) -> ContainerPhotoViewModel {
-        let photos = remotePhoto.photos.photo
+    private func mapToContainerViewModel(from photos: Photos) -> ContainerPhotoViewModel {
+        let photoViewModels = photos.photo
             .map { mapToViewModel(from: $0) }
-        return .init(total: remotePhoto.photos.total, page: remotePhoto.photos.page, photos: photos)
+        return .init(total: photos.total, page: photos.page, photos: photoViewModels)
     }
     
     private func mapToViewModel(from photo: Photo)-> PhotoViewModel {
