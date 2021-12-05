@@ -13,6 +13,9 @@ struct PhotoContainerView: View {
     var body: some View {
             VStack {
                 PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
+                if viewModel.isLoading {
+                    ProgressView()
+                }
             }
             .padding()
             .onAppear {

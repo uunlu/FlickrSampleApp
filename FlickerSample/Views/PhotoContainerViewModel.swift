@@ -22,6 +22,7 @@ final class PhotoContainerViewModel: ObservableObject {
     @Published var items: [PhotoViewModel] = []
     @Published var searchText: String = "amsterdam"
     @Published var searchTerms: [String] = []
+    @Published var isLoading = false
     
     init(service: PhotoLoader) {
         self.model = .init(total: 0, page: 0, photos: [])
@@ -30,6 +31,7 @@ final class PhotoContainerViewModel: ObservableObject {
     }
     
     func load() {
+        isLoading = true
         let request = PhotoRequest(tags: searchText, perPage: perPage, page: page)
         service.load(request: request)
             .delay(for: .seconds(0.5), scheduler: RunLoop.main)
@@ -37,12 +39,14 @@ final class PhotoContainerViewModel: ObservableObject {
                 switch completion {
                 case .failure(let error):
                     print(error)
+                    self.isLoading = false
                     break
                 case .finished:
                     break
                 }
             }) { data in
                 self.model = data
+                self.isLoading = false
             }
             .store(in: &bag)
     }
