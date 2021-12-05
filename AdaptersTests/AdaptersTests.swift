@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Entities
 @testable import Adapters
 
 class AdaptersTests: XCTestCase {
@@ -17,5 +18,24 @@ class AdaptersTests: XCTestCase {
         
         XCTAssertEqual(urlString, expectedURL)
     }
+    
+    func test_map_photo_to_photoViewModel() {
+        let photo = Photo(id: "51722062928", owner: "28169156@N03", secret: "52fe2850ef", server: "65535", farm: 66, title: "From another showroom")
+        let viewModel = mapToViewModel(from: photo)
+        let expectedURL = "https://farm66.static.flickr.com/65535/51722062928_52fe2850ef.jpg"
+        XCTAssertEqual(viewModel.imageURLString, expectedURL)
+        XCTAssertEqual(viewModel.title, photo.title)
+    }
+    
+    private func mapToViewModel(from photo: Photo)-> PhotoViewModel {
+        let urlString = "https://farm\(photo.farm).static.flickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg"
+        return .init(imageURLString: urlString, title: photo.title)
+    }
+}
+
+struct PhotoViewModel: Identifiable {
+    public var id: String { UUID().uuidString }
+    public let imageURLString: String
+    public let title: String
 }
 
