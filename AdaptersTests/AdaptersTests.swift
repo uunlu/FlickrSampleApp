@@ -26,6 +26,25 @@ class AdaptersTests: XCTestCase {
         XCTAssertEqual(viewModel.imageURLString, expectedURL)
         XCTAssertEqual(viewModel.title, photo.title)
     }
+
+    func test_map_remotePhoto_to_containerPhotoViewModel() {
+        let photo = Photo(id: "51722062928", owner: "28169156@N03", secret: "52fe2850ef", server: "65535", farm: 66, title: "From another showroom")
+        let expectedURL = "https://farm66.static.flickr.com/65535/51722062928_52fe2850ef.jpg"
+        let photos = Photos(page: 1, pages: 10, perpage: 10, total: 100, photo: [photo])
+        let remotePhoto = RemotePhoto(photos: photos, stat: "")
+        let containerPhotoViewModel = mapToContainerViewModel(from: remotePhoto)
+        
+        XCTAssertEqual(containerPhotoViewModel.page, 1)
+        XCTAssertEqual(containerPhotoViewModel.total, 100)
+        XCTAssertEqual(containerPhotoViewModel.photos.count, 1)
+        XCTAssertEqual(containerPhotoViewModel.photos.first?.imageURLString, expectedURL)
+    }
+    
+    private func mapToContainerViewModel(from remotePhoto: RemotePhoto) -> ContainerPhotoViewModel {
+        let photos = remotePhoto.photos.photo
+            .map { mapToViewModel(from: $0) }
+        return .init(total: remotePhoto.photos.total, page: remotePhoto.photos.page, photos: photos)
+    }
     
     private func mapToViewModel(from photo: Photo)-> PhotoViewModel {
         let urlString = "https://farm\(photo.farm).static.flickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg"
@@ -39,3 +58,8 @@ struct PhotoViewModel: Identifiable {
     public let title: String
 }
 
+struct ContainerPhotoViewModel {
+    let total: Int
+    let page: Int
+    let photos: [PhotoViewModel]
+}
