@@ -14,6 +14,13 @@ class ImageCacheTests: XCTestCase {
         let sut = ImageCache.shared
         XCTAssertEqual(sut.sizeLimit, 5 * 1024 * 1024)
     }
+    
+    func test_shouldChangeCacheLimit() {
+        let sut = ImageCache.shared
+        let sizeLimit = 1024 * 1024
+        sut.configure(limit: sizeLimit)
+        XCTAssertEqual(sut.sizeLimit, sizeLimit)
+    }
 }
 
 class ImageCache {
