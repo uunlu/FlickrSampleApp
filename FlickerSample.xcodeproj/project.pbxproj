@@ -19,7 +19,6 @@
 		3523935E275CD4DD00EC7112 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523935D275CD4DD00EC7112 /* NetworkError.swift */; };
 		352EFA25275CDA1A006281E2 /* Adapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA1D275CDA1A006281E2 /* Adapters.framework */; };
 		352EFA2A275CDA1A006281E2 /* AdaptersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA29275CDA1A006281E2 /* AdaptersTests.swift */; };
-		352EFA2B275CDA1A006281E2 /* Adapters.h in Headers */ = {isa = PBXBuildFile; fileRef = 352EFA1F275CDA1A006281E2 /* Adapters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		352EFA33275CE34A006281E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA32275CE34A006281E2 /* Config.swift */; };
 		352EFA35275CE36D006281E2 /* EndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA34275CE36D006281E2 /* EndpointFactory.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 		3523935B275CD4A800EC7112 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3523935D275CD4DD00EC7112 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		352EFA1D275CDA1A006281E2 /* Adapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Adapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		352EFA1F275CDA1A006281E2 /* Adapters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adapters.h; sourceTree = "<group>"; };
 		352EFA24275CDA1A006281E2 /* AdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		352EFA29275CDA1A006281E2 /* AdaptersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptersTests.swift; sourceTree = "<group>"; };
 		352EFA32275CE34A006281E2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -208,9 +206,7 @@
 		352EFA1E275CDA1A006281E2 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				352EFA1F275CDA1A006281E2 /* Adapters.h */,
-				352EFA32275CE34A006281E2 /* Config.swift */,
-				352EFA34275CE36D006281E2 /* EndpointFactory.swift */,
+				352EFA36275CE670006281E2 /* Helper */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -221,6 +217,15 @@
 				352EFA29275CDA1A006281E2 /* AdaptersTests.swift */,
 			);
 			path = AdaptersTests;
+			sourceTree = "<group>";
+		};
+		352EFA36275CE670006281E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				352EFA32275CE34A006281E2 /* Config.swift */,
+				352EFA34275CE36D006281E2 /* EndpointFactory.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +242,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352EFA2B275CDA1A006281E2 /* Adapters.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
