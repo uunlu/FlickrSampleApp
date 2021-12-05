@@ -58,6 +58,7 @@ final class PhotoContainerViewModel: ObservableObject {
     
     private func bind() {
         $searchText
+            .removeDuplicates(by: { $0 == $1 })
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .sink(receiveValue: { value in
                 self.search(value)
