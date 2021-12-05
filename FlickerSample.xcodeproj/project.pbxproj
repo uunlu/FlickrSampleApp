@@ -23,6 +23,8 @@
 		352EFA35275CE36D006281E2 /* EndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA34275CE36D006281E2 /* EndpointFactory.swift */; };
 		352EFA44275CE6BD006281E2 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA3C275CE6BD006281E2 /* Entities.framework */; };
 		352EFA52275CE6E8006281E2 /* RemotePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA51275CE6E8006281E2 /* RemotePhoto.swift */; };
+		352EFA54275CE7DB006281E2 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA3C275CE6BD006281E2 /* Entities.framework */; };
+		352EFA55275CE7DB006281E2 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA3C275CE6BD006281E2 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,28 @@
 			remoteGlobalIDString = 352EFA3B275CE6BD006281E2;
 			remoteInfo = Entities;
 		};
+		352EFA56275CE7DB006281E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 352EFA3B275CE6BD006281E2;
+			remoteInfo = Entities;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		352EFA58275CE7DB006281E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				352EFA55275CE7DB006281E2 /* Entities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		35239312275CCBCE00EC7112 /* FlickerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EFA54275CE7DB006281E2 /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +193,7 @@
 				352EFA28275CDA1A006281E2 /* AdaptersTests */,
 				352EFA3D275CE6BD006281E2 /* Entities */,
 				35239313275CCBCE00EC7112 /* Products */,
+				352EFA53275CE7DB006281E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +289,13 @@
 				352EFA51275CE6E8006281E2 /* RemotePhoto.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		352EFA53275CE7DB006281E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,10 +422,12 @@
 				352EFA19275CDA1A006281E2 /* Sources */,
 				352EFA1A275CDA1A006281E2 /* Frameworks */,
 				352EFA1B275CDA1A006281E2 /* Resources */,
+				352EFA58275CE7DB006281E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				352EFA57275CE7DB006281E2 /* PBXTargetDependency */,
 			);
 			name = Adapters;
 			productName = Adapters;
@@ -694,6 +728,11 @@
 			isa = PBXTargetDependency;
 			target = 352EFA3B275CE6BD006281E2 /* Entities */;
 			targetProxy = 352EFA45275CE6BD006281E2 /* PBXContainerItemProxy */;
+		};
+		352EFA57275CE7DB006281E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 352EFA3B275CE6BD006281E2 /* Entities */;
+			targetProxy = 352EFA56275CE7DB006281E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1085,6 +1124,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1118,6 +1158,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1213,6 +1254,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1246,6 +1288,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
