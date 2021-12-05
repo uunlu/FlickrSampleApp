@@ -74,8 +74,3 @@ class ImageLoaderSpy:ObservableObject, ImageLoading {
     }
 }
 
-protocol ImageLoading {
-    var image: UIImage? { get }
-    func load(url: URL?)
-    func cancel()
-}

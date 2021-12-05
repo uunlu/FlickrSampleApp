@@ -41,6 +41,8 @@
 		352EFA7A275D074F006281E2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA79275D074F006281E2 /* ImageCache.swift */; };
 		352EFA7C275D07C4006281E2 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA7B275D07C4006281E2 /* ImageCaching.swift */; };
 		352EFA7E275D081C006281E2 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA7D275D081C006281E2 /* ImageLoaderTests.swift */; };
+		352EFA80275D0C8B006281E2 /* ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA7F275D0C8B006281E2 /* ImageLoading.swift */; };
+		352EFA82275D0CD5006281E2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA81275D0CD5006281E2 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		352EFA79275D074F006281E2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		352EFA7B275D07C4006281E2 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 		352EFA7D275D081C006281E2 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
+		352EFA7F275D0C8B006281E2 /* ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoading.swift; sourceTree = "<group>"; };
+		352EFA81275D0CD5006281E2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +374,8 @@
 			children = (
 				352EFA79275D074F006281E2 /* ImageCache.swift */,
 				352EFA7B275D07C4006281E2 /* ImageCaching.swift */,
+				352EFA7F275D0C8B006281E2 /* ImageLoading.swift */,
+				352EFA81275D0CD5006281E2 /* ImageLoader.swift */,
 			);
 			path = AsyncImage;
 			sourceTree = "<group>";
@@ -685,7 +691,9 @@
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
 				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
 				352EFA7C275D07C4006281E2 /* ImageCaching.swift in Sources */,
+				352EFA82275D0CD5006281E2 /* ImageLoader.swift in Sources */,
 				352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */,
+				352EFA80275D0C8B006281E2 /* ImageLoading.swift in Sources */,
 				352EFA75275D02C3006281E2 /* PhotoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
