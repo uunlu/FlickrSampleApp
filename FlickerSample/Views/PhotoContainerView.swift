@@ -12,7 +12,7 @@ struct PhotoContainerView: View {
     
     var body: some View {
             VStack {
-                PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
+                photoList
                 if viewModel.isLoading {
                     ProgressView()
                 }
@@ -22,6 +22,13 @@ struct PhotoContainerView: View {
                 viewModel.load()
             }
             .navigationTitle("\(viewModel.model.total)  Photos")
+    }
+}
+
+// MARK: - Extensions
+extension PhotoContainerView {
+    var photoList: some View {
+        PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
     }
 }
 
