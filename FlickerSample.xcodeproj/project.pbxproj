@@ -20,6 +20,8 @@
 		352EFA25275CDA1A006281E2 /* Adapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EFA1D275CDA1A006281E2 /* Adapters.framework */; };
 		352EFA2A275CDA1A006281E2 /* AdaptersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA29275CDA1A006281E2 /* AdaptersTests.swift */; };
 		352EFA2B275CDA1A006281E2 /* Adapters.h in Headers */ = {isa = PBXBuildFile; fileRef = 352EFA1F275CDA1A006281E2 /* Adapters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		352EFA33275CE34A006281E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA32275CE34A006281E2 /* Config.swift */; };
+		352EFA35275CE36D006281E2 /* EndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA34275CE36D006281E2 /* EndpointFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		352EFA1F275CDA1A006281E2 /* Adapters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adapters.h; sourceTree = "<group>"; };
 		352EFA24275CDA1A006281E2 /* AdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		352EFA29275CDA1A006281E2 /* AdaptersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptersTests.swift; sourceTree = "<group>"; };
+		352EFA32275CE34A006281E2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		352EFA34275CE36D006281E2 /* EndpointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				352EFA1F275CDA1A006281E2 /* Adapters.h */,
+				352EFA32275CE34A006281E2 /* Config.swift */,
+				352EFA34275CE36D006281E2 /* EndpointFactory.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 					};
 					352EFA1C275CDA1A006281E2 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					352EFA23275CDA1A006281E2 = {
 						CreatedOnToolsVersion = 13.0;
@@ -524,6 +531,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EFA33275CE34A006281E2 /* Config.swift in Sources */,
+				352EFA35275CE36D006281E2 /* EndpointFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +952,7 @@
 		352EFA2D275CDA1A006281E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -965,6 +975,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -974,6 +985,7 @@
 		352EFA2E275CDA1A006281E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1005,6 +1017,7 @@
 		352EFA30275CDA1A006281E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1027,6 +1040,7 @@
 		352EFA31275CDA1A006281E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
