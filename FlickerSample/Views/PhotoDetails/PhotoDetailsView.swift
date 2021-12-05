@@ -22,8 +22,10 @@ struct PhotoDetailsView: View {
     }
 }
 
+#if DEBUG
 struct PhotoDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoDetailsView(model: .init(imageURL:nil, title: "Some Title"))
     }
 }
+#endif
