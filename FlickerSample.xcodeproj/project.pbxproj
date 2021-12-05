@@ -14,6 +14,9 @@
 		35239327275CCBD200EC7112 /* FlickerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239326275CCBD200EC7112 /* FlickerSampleTests.swift */; };
 		35239331275CCBD200EC7112 /* FlickerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239330275CCBD200EC7112 /* FlickerSampleUITests.swift */; };
 		35239333275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239332275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift */; };
+		3523934C275CCCBC00EC7112 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; };
+		35239351275CCCBC00EC7112 /* NetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */; };
+		35239352275CCCBC00EC7112 /* NetworkServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 35239346275CCCBC00EC7112 /* NetworkServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,13 @@
 			remoteGlobalIDString = 35239311275CCBCE00EC7112;
 			remoteInfo = FlickerSample;
 		};
+		3523934D275CCCBC00EC7112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3523930A275CCBCD00EC7112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35239343275CCCBC00EC7112;
+			remoteInfo = NetworkServices;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,10 @@
 		3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239330275CCBD200EC7112 /* FlickerSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleUITests.swift; sourceTree = "<group>"; };
 		35239332275CCBD200EC7112 /* FlickerSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35239344275CCCBC00EC7112 /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35239346275CCCBC00EC7112 /* NetworkServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkServices.h; sourceTree = "<group>"; };
+		3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35239341275CCCBC00EC7112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35239348275CCCBC00EC7112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3523934C275CCCBC00EC7112 /* NetworkServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +106,8 @@
 				35239314275CCBCE00EC7112 /* FlickerSample */,
 				35239325275CCBD200EC7112 /* FlickerSampleTests */,
 				3523932F275CCBD200EC7112 /* FlickerSampleUITests */,
+				35239345275CCCBC00EC7112 /* NetworkServices */,
+				3523934F275CCCBC00EC7112 /* NetworkServicesTests */,
 				35239313275CCBCE00EC7112 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +118,8 @@
 				35239312275CCBCE00EC7112 /* FlickerSample.app */,
 				35239322275CCBD200EC7112 /* FlickerSampleTests.xctest */,
 				3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */,
+				35239344275CCCBC00EC7112 /* NetworkServices.framework */,
+				3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,7 +160,34 @@
 			path = FlickerSampleUITests;
 			sourceTree = "<group>";
 		};
+		35239345275CCCBC00EC7112 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				35239346275CCCBC00EC7112 /* NetworkServices.h */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		3523934F275CCCBC00EC7112 /* NetworkServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */,
+			);
+			path = NetworkServicesTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3523933F275CCCBC00EC7112 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35239352275CCCBC00EC7112 /* NetworkServices.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		35239311275CCBCE00EC7112 /* FlickerSample */ = {
@@ -183,6 +243,42 @@
 			productReference = 3523932C275CCBD200EC7112 /* FlickerSampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		35239343275CCCBC00EC7112 /* NetworkServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35239353275CCCBC00EC7112 /* Build configuration list for PBXNativeTarget "NetworkServices" */;
+			buildPhases = (
+				3523933F275CCCBC00EC7112 /* Headers */,
+				35239340275CCCBC00EC7112 /* Sources */,
+				35239341275CCCBC00EC7112 /* Frameworks */,
+				35239342275CCCBC00EC7112 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkServices;
+			productName = NetworkServices;
+			productReference = 35239344275CCCBC00EC7112 /* NetworkServices.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3523934A275CCCBC00EC7112 /* NetworkServicesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35239356275CCCBC00EC7112 /* Build configuration list for PBXNativeTarget "NetworkServicesTests" */;
+			buildPhases = (
+				35239347275CCCBC00EC7112 /* Sources */,
+				35239348275CCCBC00EC7112 /* Frameworks */,
+				35239349275CCCBC00EC7112 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3523934E275CCCBC00EC7112 /* PBXTargetDependency */,
+			);
+			name = NetworkServicesTests;
+			productName = NetworkServicesTests;
+			productReference = 3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +300,12 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 35239311275CCBCE00EC7112;
 					};
+					35239343275CCCBC00EC7112 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					3523934A275CCCBC00EC7112 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 				};
 			};
 			buildConfigurationList = 3523930D275CCBCD00EC7112 /* Build configuration list for PBXProject "FlickerSample" */;
@@ -222,6 +324,8 @@
 				35239311275CCBCE00EC7112 /* FlickerSample */,
 				35239321275CCBD200EC7112 /* FlickerSampleTests */,
 				3523932B275CCBD200EC7112 /* FlickerSampleUITests */,
+				35239343275CCCBC00EC7112 /* NetworkServices */,
+				3523934A275CCCBC00EC7112 /* NetworkServicesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +348,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3523932A275CCBD200EC7112 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35239342275CCCBC00EC7112 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35239349275CCCBC00EC7112 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +397,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35239340275CCCBC00EC7112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35239347275CCCBC00EC7112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35239351275CCCBC00EC7112 /* NetworkServicesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +424,11 @@
 			isa = PBXTargetDependency;
 			target = 35239311275CCBCE00EC7112 /* FlickerSample */;
 			targetProxy = 3523932D275CCBD200EC7112 /* PBXContainerItemProxy */;
+		};
+		3523934E275CCCBC00EC7112 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35239343275CCCBC00EC7112 /* NetworkServices */;
+			targetProxy = 3523934D275CCCBC00EC7112 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -561,6 +699,112 @@
 			};
 			name = Release;
 		};
+		35239354275CCCBC00EC7112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.NetworkServices;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35239355275CCCBC00EC7112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.NetworkServices;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		35239357275CCCBC00EC7112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.NetworkServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		35239358275CCCBC00EC7112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugurunlu.NetworkServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -596,6 +840,24 @@
 			buildConfigurations = (
 				3523933D275CCBD200EC7112 /* Debug */,
 				3523933E275CCBD200EC7112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35239353275CCCBC00EC7112 /* Build configuration list for PBXNativeTarget "NetworkServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35239354275CCCBC00EC7112 /* Debug */,
+				35239355275CCCBC00EC7112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35239356275CCCBC00EC7112 /* Build configuration list for PBXNativeTarget "NetworkServicesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35239357275CCCBC00EC7112 /* Debug */,
+				35239358275CCCBC00EC7112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
