@@ -49,12 +49,6 @@ extension ImageCache: ImageCaching {
     }
 }
 
-protocol ImageCaching {
-    func item(for url: URL) -> UIImage?
-    func insert(for url: URL, image: UIImage)
-    func remove(for key: URL)
-}
-
 fileprivate extension UIImage {
     var fileSize: Int {
         guard let cgImage = cgImage else { return 0 }
