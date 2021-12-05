@@ -11,7 +11,15 @@ struct PhotoContainerView: View {
     @StateObject var viewModel: PhotoContainerViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            LazyVStack {
+                ForEach(viewModel.model.photos) {
+                    Text($0.title)
+                    Text($0.imageURLString)
+                }
+            }
+            .onAppear {
+                viewModel.load()
+            }
     }
 }
 

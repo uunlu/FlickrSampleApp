@@ -36,6 +36,7 @@
 		352EFA6B275CF451006281E2 /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA6E275CF504006281E2 /* PhotoContainerView.swift */; };
 		352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */; };
+		352EFA75275D02C3006281E2 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA74275D02C3006281E2 /* PhotoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		352EFA63275CF41C006281E2 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		352EFA6E275CF504006281E2 /* PhotoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerView.swift; sourceTree = "<group>"; };
 		352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerViewModel.swift; sourceTree = "<group>"; };
+		352EFA74275D02C3006281E2 /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 			children = (
 				352EFA6E275CF504006281E2 /* PhotoContainerView.swift */,
 				352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */,
+				352EFA74275D02C3006281E2 /* PhotoListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
 				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
 				352EFA6F275CF504006281E2 /* PhotoContainerView.swift in Sources */,
+				352EFA75275D02C3006281E2 /* PhotoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,15 @@
 import Foundation
 
 public struct ContainerPhotoViewModel {
-    let total: Int
-    let page: Int
-    let photos: [PhotoViewModel]
+    public init(total: Int, page: Int, photos: [PhotoViewModel]) {
+        self.total = total
+        self.page = page
+        self.photos = photos
+    }
+    
+    public let total: Int
+    public let page: Int
+    public let photos: [PhotoViewModel]
 }
 
 extension ContainerPhotoViewModel {
