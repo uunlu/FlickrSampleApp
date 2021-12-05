@@ -338,6 +338,7 @@
 		352EFA72275CF5C2006281E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				352EFA76275D0464006281E2 /* AsyncImage */,
 				352EFA6E275CF504006281E2 /* PhotoContainerView.swift */,
 				352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */,
 				352EFA74275D02C3006281E2 /* PhotoListView.swift */,
@@ -352,6 +353,13 @@
 				352EFA63275CF41C006281E2 /* CompositionRoot.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		352EFA76275D0464006281E2 /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AsyncImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

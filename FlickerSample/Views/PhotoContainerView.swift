@@ -20,6 +20,7 @@ struct PhotoContainerView: View {
             .onAppear {
                 viewModel.load()
             }
+            .navigationTitle("\(viewModel.model.total)  Photos")
     }
 }
 
