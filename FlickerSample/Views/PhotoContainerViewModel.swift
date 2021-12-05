@@ -16,10 +16,10 @@ final class PhotoContainerViewModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     @Published private(set) var model: ContainerPhotoViewModel {
         didSet {
-            items.append(contentsOf: model.photos.map { .init(imageURL: $0.imageURLString, title: $0.title)})
+            items.append(contentsOf: model.photos.map { .init(imageURL: URL(string: $0.imageURLString), title: $0.title)})
         }
     }
-    @Published private(set) var items: [PhotoViewModel] = []
+    @Published var items: [PhotoViewModel] = []
     init(service: PhotoLoader) {
         self.model = .init(total: 0, page: 0, photos: [])
         self.service = service
@@ -53,6 +53,6 @@ class PhotoLoaderSpy: PhotoLoader {
 
 struct PhotoViewModel: Identifiable {
     let id: String = UUID().uuidString
-    let imageURL: String
+    let imageURL: URL?
     let title: String
 }

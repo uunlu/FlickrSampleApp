@@ -20,6 +20,9 @@ struct PhotoListView: View {
                 ForEach(items) { item in
                     HStack {
                         Text(item.title)
+                        AsyncImageView(url: item.imageURL){
+                            Text("Loading...")
+                        }
                     }
                 }
             }
@@ -30,7 +33,7 @@ struct PhotoListView: View {
 struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoListView(items:
-                            .constant([.init(imageURL: "someURL", title: "Some Title")]
+                            .constant([.init(imageURL: URL(string: "http://some-url.com"), title: "Some Title")]
                                      ))
     }
 }

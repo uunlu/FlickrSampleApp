@@ -11,11 +11,8 @@ struct PhotoContainerView: View {
     @StateObject var viewModel: PhotoContainerViewModel
     
     var body: some View {
-            LazyVStack {
-                ForEach(viewModel.model.photos) {
-                    Text($0.title)
-                    Text($0.imageURLString)
-                }
+            VStack {
+                PhotoListView(items: $viewModel.items)
             }
             .onAppear {
                 viewModel.load()
