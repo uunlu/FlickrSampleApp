@@ -61,10 +61,6 @@ class NetworkServicesTests: XCTestCase {
     }
 }
 
-public protocol NetworkRequestClient {
-    func get<T: Decodable>(from request: URLRequest) -> AnyPublisher<T, Error>
-}
-
 class NetworkRequestSpy: NetworkRequestClient {
     private let result: Result<Data, Error>
     private (set) var session: URLSession

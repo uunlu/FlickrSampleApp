@@ -17,6 +17,8 @@
 		3523934C275CCCBC00EC7112 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35239344275CCCBC00EC7112 /* NetworkServices.framework */; };
 		35239351275CCCBC00EC7112 /* NetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */; };
 		35239352275CCCBC00EC7112 /* NetworkServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 35239346275CCCBC00EC7112 /* NetworkServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3523935A275CD47B00EC7112 /* NetworkRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35239359275CD47B00EC7112 /* NetworkRequestClient.swift */; };
+		3523935C275CD4A800EC7112 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523935B275CD4A800EC7112 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		35239346275CCCBC00EC7112 /* NetworkServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkServices.h; sourceTree = "<group>"; };
 		3523934B275CCCBC00EC7112 /* NetworkServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239350275CCCBC00EC7112 /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
+		35239359275CD47B00EC7112 /* NetworkRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestClient.swift; sourceTree = "<group>"; };
+		3523935B275CD4A800EC7112 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				35239346275CCCBC00EC7112 /* NetworkServices.h */,
+				35239359275CD47B00EC7112 /* NetworkRequestClient.swift */,
+				3523935B275CD4A800EC7112 /* NetworkClient.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 					};
 					35239343275CCCBC00EC7112 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					3523934A275CCCBC00EC7112 = {
 						CreatedOnToolsVersion = 13.0;
@@ -401,6 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3523935A275CD47B00EC7112 /* NetworkRequestClient.swift in Sources */,
+				3523935C275CD4A800EC7112 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +711,7 @@
 		35239354275CCCBC00EC7112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -724,6 +734,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -733,6 +744,7 @@
 		35239355275CCCBC00EC7112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -764,6 +776,7 @@
 		35239357275CCCBC00EC7112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -786,6 +799,7 @@
 		35239358275CCCBC00EC7112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
