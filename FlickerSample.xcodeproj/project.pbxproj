@@ -262,11 +262,10 @@
 		35239314275CCBCE00EC7112 /* FlickerSample */ = {
 			isa = PBXGroup;
 			children = (
-				35239315275CCBCE00EC7112 /* FlickerSampleApp.swift */,
+				352EFA73275CF621006281E2 /* Root */,
+				352EFA72275CF5C2006281E2 /* Views */,
 				35239319275CCBD100EC7112 /* Assets.xcassets */,
 				3523931B275CCBD100EC7112 /* Preview Content */,
-				352EFA63275CF41C006281E2 /* CompositionRoot.swift */,
-				352EFA72275CF5C2006281E2 /* Views */,
 			);
 			path = FlickerSample;
 			sourceTree = "<group>";
@@ -357,6 +356,15 @@
 				352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		352EFA73275CF621006281E2 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				35239315275CCBCE00EC7112 /* FlickerSampleApp.swift */,
+				352EFA63275CF41C006281E2 /* CompositionRoot.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
