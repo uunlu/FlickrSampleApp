@@ -52,14 +52,4 @@ class AdaptersTests: XCTestCase {
     }
 }
 
-struct PhotoViewModel: Identifiable {
-    public var id: String { UUID().uuidString }
-    public let imageURLString: String
-    public let title: String
-}
 
-struct ContainerPhotoViewModel {
-    let total: Int
-    let page: Int
-    let photos: [PhotoViewModel]
-}
