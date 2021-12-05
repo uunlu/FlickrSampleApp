@@ -12,10 +12,6 @@ struct PhotoContainerView: View {
     
     var body: some View {
             VStack {
-//                TextField("Search...", text: $viewModel.searchText)
-//                    .padding(10)
-//                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
-//                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 PhotoListView(items: $viewModel.items, searchText: $viewModel.searchText, loadMore: viewModel.loadMore)
             }
             .padding()
