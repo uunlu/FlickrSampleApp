@@ -31,7 +31,7 @@ struct PhotoContainerView: View {
             .sheet(isPresented: $showHistory, onDismiss: {
                 
             }, content: {
-                HistoryView(items: viewModel.searchTerms)
+                HistoryView(items: viewModel.searchTerms, searchText: $viewModel.searchText)
             })
     }
 }

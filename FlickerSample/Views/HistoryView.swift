@@ -9,15 +9,21 @@ import SwiftUI
 
 struct HistoryView: View {
     let items: [String]
-    
+    @Binding var searchText: String
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
                 Text("Search History")
                     .font(.title)
                 Divider()
-                ForEach(items, id:\.self) {
-                    Text($0)
+                ForEach(items, id:\.self) { item in
+                    Text(item)
+                        .onTapGesture(perform: {
+                            searchText =  item
+                            presentationMode.wrappedValue.dismiss()
+                        })
                 }
                 Spacer()
             }
@@ -28,6 +34,6 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView(items: ["amsterdam", "utrecht", "haag"])
+        HistoryView(items: ["amsterdam", "utrecht", "haag"], searchText: .constant("haag"))
     }
 }
