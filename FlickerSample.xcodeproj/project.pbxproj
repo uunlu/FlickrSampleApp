@@ -38,6 +38,7 @@
 		352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */; };
 		352EFA75275D02C3006281E2 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA74275D02C3006281E2 /* PhotoListView.swift */; };
 		352EFA78275D04E0006281E2 /* ImageCacheTestsImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA77275D04E0006281E2 /* ImageCacheTestsImageCacheTests.swift */; };
+		352EFA7A275D074F006281E2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA79275D074F006281E2 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		352EFA70275CF50C006281E2 /* PhotoContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerViewModel.swift; sourceTree = "<group>"; };
 		352EFA74275D02C3006281E2 /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 		352EFA77275D04E0006281E2 /* ImageCacheTestsImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTestsImageCacheTests.swift; sourceTree = "<group>"; };
+		352EFA79275D074F006281E2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +363,7 @@
 		352EFA76275D0464006281E2 /* AsyncImage */ = {
 			isa = PBXGroup;
 			children = (
+				352EFA79275D074F006281E2 /* ImageCache.swift */,
 			);
 			path = AsyncImage;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EFA7A275D074F006281E2 /* ImageCache.swift in Sources */,
 				352EFA64275CF41C006281E2 /* CompositionRoot.swift in Sources */,
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
 				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
