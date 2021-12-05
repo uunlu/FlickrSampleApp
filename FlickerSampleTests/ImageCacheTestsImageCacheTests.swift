@@ -27,6 +27,16 @@ class ImageCacheTests: XCTestCase {
         let image = sut.item(for: URL(string: "https://some-url.com")!)
         XCTAssertNil(image)
     }
+    
+    func test_cacheOnInsert_shouldHaveImage() {
+        let sut = ImageCache.shared
+        let url = URL(string: "https://some-url.com")!
+        let imageToInsert = UIImage(systemName: "lock")!
+        sut.insert(for: url, image: imageToInsert)
+        let image = sut.item(for: url)
+        XCTAssertNotNil(image)
+        XCTAssertEqual(imageToInsert.cgImage?.bytesPerRow, image?.cgImage?.bytesPerRow)
+    }
 }
 
 class ImageCache {
@@ -36,6 +46,7 @@ class ImageCache {
         }
     }
     private var cache: NSCache<NSString, UIImage>
+    private let lock = NSLock()
     static let defaultSizeLimit = 5 * 1024 * 1024
     static let shared: ImageCache = ImageCache(sizeLimit: defaultSizeLimit)
     
@@ -51,6 +62,10 @@ class ImageCache {
 
 extension ImageCache: ImageCaching {
     func insert(for url: URL, image: UIImage) {
+        lock.lock()
+        defer { lock.unlock() }
+        
+        cache.setObject(image, forKey: url.absoluteString as NSString, cost: image.fileSize)
     }
     
     func remove(for key: URL) {
@@ -65,4 +80,11 @@ protocol ImageCaching {
     func item(for url: URL) -> UIImage?
     func insert(for url: URL, image: UIImage)
     func remove(for key: URL)
+}
+
+fileprivate extension UIImage {
+    var fileSize: Int {
+        guard let cgImage = cgImage else { return 0 }
+        return cgImage.bytesPerRow * cgImage.height
+    }
 }
