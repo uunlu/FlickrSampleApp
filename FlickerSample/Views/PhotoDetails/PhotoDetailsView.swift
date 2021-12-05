@@ -17,6 +17,7 @@ struct PhotoDetailsView: View {
             AsyncImageView(url: model.imageURL){
                 ProgressView()
             }
+            .modifier(BoxModifier(backgroundColor: .gray.opacity(0.2), strokeColor: .gray))
             Spacer()
         }
     }

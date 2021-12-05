@@ -34,9 +34,7 @@ extension PhotoListView {
     var searchBar: some View {
         TextField("Search...", text: $searchText)
             .autocapitalization(.none)
-            .padding(10)
-            .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
-            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .modifier(BoxModifier())
     }
     
     func navigationItem(_ item: PhotoViewModel) -> some View {

@@ -47,6 +47,7 @@
 		352EFA86275D1F87006281E2 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA85275D1F87006281E2 /* PhotoViewModel.swift */; };
 		352EFA88275D47A0006281E2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA87275D47A0006281E2 /* HistoryView.swift */; };
 		352EFA8C275D4E2F006281E2 /* PhotoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA8B275D4E2F006281E2 /* PhotoDetailsView.swift */; };
+		352EFA90275D54B1006281E2 /* BoxModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EFA8F275D54B1006281E2 /* BoxModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		352EFA85275D1F87006281E2 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		352EFA87275D47A0006281E2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		352EFA8B275D4E2F006281E2 /* PhotoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsView.swift; sourceTree = "<group>"; };
+		352EFA8F275D54B1006281E2 /* BoxModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				352EFA73275CF621006281E2 /* Root */,
+				352EFA8E275D5495006281E2 /* Modifiers */,
 				352EFA72275CF5C2006281E2 /* Views */,
 				35239319275CCBD100EC7112 /* Assets.xcassets */,
 				3523931B275CCBD100EC7112 /* Preview Content */,
@@ -406,6 +409,14 @@
 				352EFA8B275D4E2F006281E2 /* PhotoDetailsView.swift */,
 			);
 			path = PhotoDetails;
+			sourceTree = "<group>";
+		};
+		352EFA8E275D5495006281E2 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				352EFA8F275D54B1006281E2 /* BoxModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,6 +731,7 @@
 				352EFA64275CF41C006281E2 /* CompositionRoot.swift in Sources */,
 				35239316275CCBCE00EC7112 /* FlickerSampleApp.swift in Sources */,
 				352EFA8C275D4E2F006281E2 /* PhotoDetailsView.swift in Sources */,
+				352EFA90275D54B1006281E2 /* BoxModifier.swift in Sources */,
 				352EFA84275D0D47006281E2 /* AsyncImageView.swift in Sources */,
 				352EFA71275CF50C006281E2 /* PhotoContainerViewModel.swift in Sources */,
 				352EFA7C275D07C4006281E2 /* ImageCaching.swift in Sources */,
