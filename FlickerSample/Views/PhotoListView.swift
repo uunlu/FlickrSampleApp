@@ -20,11 +20,12 @@ struct PhotoListView: View {
             LazyVGrid(columns: columns) {
                 ForEach(items) { item in
                     HStack {
-                        Text(item.title)
                         AsyncImageView(url: item.imageURL){
                             Text("Loading...")
                         }
                     }
+                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .onAppear{
                         if item.id == items.last?.id {
                             loadMore() 
