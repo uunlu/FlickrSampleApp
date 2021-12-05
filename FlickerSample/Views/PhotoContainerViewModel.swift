@@ -20,7 +20,8 @@ final class PhotoContainerViewModel: ObservableObject {
         }
     }
     @Published var items: [PhotoViewModel] = []
-    @Published var searchText: String = ""
+    @Published var searchText: String = "amsterdam"
+    @Published var searchTerms: [String] = []
     
     init(service: PhotoLoader) {
         self.model = .init(total: 0, page: 0, photos: [])
@@ -65,8 +66,13 @@ final class PhotoContainerViewModel: ObservableObject {
         page = 1
         model = .init(total: 0, page: 0, photos: [])
         items.removeAll()
-        
+        addHistory(text)
         load()
+    }
+    
+    private func addHistory(_ searchText: String) {
+        if searchTerms.last == searchText { return }
+        searchTerms.append(searchText)
     }
 }
 

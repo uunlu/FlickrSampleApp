@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PhotoListView: View {
     @Binding var items: [PhotoViewModel]
+    @Binding var searchText: String
     let loadMore: ()-> Void
     private let columns = [
         GridItem(.flexible()),
@@ -17,6 +18,10 @@ struct PhotoListView: View {
     
     var body: some View {
         ScrollView {
+            TextField("Search...", text: $searchText)
+                .padding(10)
+                .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
             LazyVGrid(columns: columns) {
                 ForEach(items) { item in
                     HStack {
@@ -24,6 +29,7 @@ struct PhotoListView: View {
                             Text("Loading...")
                         }
                     }
+                    .frame(height: 200)
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(.blue, lineWidth: 1))
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .onAppear{
@@ -42,7 +48,7 @@ struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
         PhotoListView(items:
                             .constant([.init(imageURL: URL(string: "http://some-url.com"), title: "Some Title")]
-                                     ), loadMore: {})
+                                     ), searchText: .constant("search text"), loadMore: {})
     }
 }
 #endif
